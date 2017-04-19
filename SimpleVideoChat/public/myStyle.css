@@ -6,19 +6,19 @@
   border:1px solid red;
 }
 
-.rVideo {
-  grid-row: 1 / 4;
-  grid-column: 3 / 4;
-}
 .lVideo {
   grid-row: 1 / 4;
   grid-column: 1/2;
 }
+.rVideo {
+  grid-row: 1 / 4;
+  grid-column: 3 / 4;
+}
 .cButtons {
-  grid-column: 1/4;
   grid-row: 5;
+  grid-column: 1/4;
 }
 .iWindwo {
-  grid-column: 1/4;
   grid-row: 6;
+  grid-column: 1/4;
 }
