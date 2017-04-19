@@ -8,11 +8,11 @@
 
 .rVideo {
   grid-row: 1 / 4;
-  grid-column: 2 / 4;
+  grid-column: 3 / 4;
 }
 .lVideo {
   grid-row: 1 / 4;
-  grid-column: 1;
+  grid-column: 1/2;
 }
 .cButtons {
   grid-column: 1/4;
