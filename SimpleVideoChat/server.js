@@ -39,7 +39,7 @@ wss.on('connection', function (client) {
   });
 
   client.on('close', function(reasonCode, description) {
-        console.log((new Date()) + ' Peer ' + client.remoteAddress + ' disconnected.');
+        console.log((new Date()) + ' Peer ' + client._socket.remoteAddress + ' disconnected.');
     });
 
 });
