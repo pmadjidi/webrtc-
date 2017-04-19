@@ -6,19 +6,19 @@
   border:1px solid black;
 }
 
-.remoteVideo {
+.rVideo {
   grid-row: 1 / 4;
   grid-column: 2 / 4;
 }
-.localVideo {
+.lVideo {
   grid-row: 1 / 4;
   grid-column: 1;
 }
-.controllButtons {
+.cButtons {
   grid-column: 1/4;
   grid-row: 5;
 }
-.infoWindwo {
+.iWindwo {
   grid-column: 1/4;
   grid-row: 1/4;
 }
