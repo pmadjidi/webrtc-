@@ -23,7 +23,7 @@ var peerConn = null,
      {'url': 'stun:stun.l.google.com:19302'}]
   };
 
-  var constrains = {'DtlsSrtpKeyAgreement': true}
+
 
 function pageReady() {
   // check browser WebRTC availability
@@ -33,7 +33,7 @@ function pageReady() {
     localVideo = document.getElementById('localVideo');
     remoteVideo = document.getElementById('remoteVideo');
     statusWindow = document.getElementById('statusWindow');
-    statusWindow.value = "Not Connected........."
+    statusWindow.value = "Not connected yet.........\nReady to call........."
     videoCallButton.removeAttribute("disabled");
     videoCallButton.addEventListener("click", initiateCall);
     endCallButton.addEventListener("click", function (evt) {
