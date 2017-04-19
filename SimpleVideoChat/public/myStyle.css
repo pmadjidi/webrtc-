@@ -7,6 +7,8 @@
   border:20px solid red;
 }
 
+video { grid-area: 1 / 1; width: 0; height: 0; }
+
 .lVideo {
   grid-row: 1 / 4;
   grid-column: 1/2;
