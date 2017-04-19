@@ -37,6 +37,11 @@ wss.on('connection', function (client) {
     /** broadcast message to all clients */
     wss.broadcast(message, client);
   });
+
+  client.on('close', function(reasonCode, description) {
+        console.log((new Date()) + ' Peer ' + connection.remoteAddress + ' disconnected.');
+    });
+
 });
 // broadcasting the message to all WebSocket clients.
 wss.broadcast = function (data, exclude) {
