@@ -40,7 +40,7 @@ function pageReady() {
     statusWindow.value = "Not connected yet.........\nReady to call........."
     videoCallButton.removeAttribute("disabled");
     videoCallButton.addEventListener("click", initiateCall);
-    wsc.send(JSON.stringify({"PEER": "ONLINE" }));
+    wsc.send(JSON.stringify({"peer": "ONLINE" }));
     /* endCallButton.addEventListener("click", function (evt) {
       wsc.send(JSON.stringify({"closeConnection": true }));
     });
