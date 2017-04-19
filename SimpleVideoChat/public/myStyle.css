@@ -15,10 +15,10 @@
   grid-column: 3 / 4;
 }
 .cButtons {
-  grid-row: 6;
+  grid-row: 6/7;
   grid-column: 1/4;
 }
 .iWindwo {
-  grid-row: 7;
+  grid-row: 8/9;
   grid-column: 1/4;
 }
