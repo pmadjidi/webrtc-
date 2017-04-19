@@ -15,7 +15,7 @@
 }
 .rVideo {
   grid-row: 1 / 4;
-  grid-column: 3 / 4;
+  grid-column: 2/3;
   border: 10px solid blue;
 }
 .cButtons {
