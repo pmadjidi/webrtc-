@@ -32,7 +32,6 @@ function pageReady() {
   // check browser WebRTC availability
   if(navigator.getUserMedia) {
     videoCallButton = document.getElementById("videoCallButton");
-    endCallButton = document.getElementById("endCallButton");
     resetButton = document.getElementById("resetButton");
     localVideo = document.getElementById('localVideo');
     remoteVideo = document.getElementById('remoteVideo');
@@ -159,7 +158,7 @@ function onIceCandidateHandler(evt) {
 
 function onAddStreamHandler(evt) {
   videoCallButton.setAttribute("disabled", true);
-  endCallButton.removeAttribute("disabled");
+  resetButton.removeAttribute("disabled");
   // set remote video stream as source for remote video HTML5 element
   remoteVideo.src = URL.createObjectURL(evt.stream);
 };
