@@ -39,6 +39,7 @@ function pageReady() {
     statusWindow.value = "Not connected yet.........\nReady to call........."
     videoCallButton.removeAttribute("disabled");
     videoCallButton.addEventListener("click", initiateCall);
+    wsc.send(JSON.stringify({"PEER": "ONLINE" }));
     /* endCallButton.addEventListener("click", function (evt) {
       wsc.send(JSON.stringify({"closeConnection": true }));
     });
@@ -109,6 +110,9 @@ wsc.onmessage = function (evt) {
     statusWindow.value += "\nReceived ICECandidate from remote peer......"
     peerConn.addIceCandidate(new RTCIceCandidate(signal.candidate))
     .catch(err=>console.log("In Error",err));
+  } else if (signal.peer){
+    statusWindow.value += "\nPeer Online......"
+
   } else if ( signal.closeConnection){
     console.log("Received 'close call' signal from remote peer.");
     statusWindow.value += "\nAbout to tear down the call......."
