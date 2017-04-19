@@ -43,6 +43,7 @@ function pageReady() {
     });
 
     resetButton.addEventListener("click", function (evt) {
+      console.log("Reset Called.......")
       location.reload();
     });
 
