@@ -1,14 +1,9 @@
 /** browser dependent definition are aligned to one and the same standard name **/
-navigator.getUserMedia = navigator.getUserMedia || navigator.mozGetUserMedia || navigator.webkitGetUs
-erMedia;
-window.RTCPeerConnection = window.RTCPeerConnection || window.mozRTCPeerConnection || window.webkitRT
-CPeerConnection;
-window.RTCIceCandidate = window.RTCIceCandidate || window.mozRTCIceCandidate || window.webkitRTCIceCa
-ndidate;
-window.RTCSessionDescription = window.RTCSessionDescription || window.mozRTCSessionDescription || win
-dow.webkitRTCSessionDescription;
-window.SpeechRecognition = window.SpeechRecognition || window.webkitSpeechRecognition || window.mozSp
-eechRecognition
+navigator.getUserMedia = navigator.getUserMedia || navigator.mozGetUserMedia || navigator.webkitGetUserMedia;
+window.RTCPeerConnection = window.RTCPeerConnection || window.mozRTCPeerConnection || window.webkitRTCPeerConnection;
+window.RTCIceCandidate = window.RTCIceCandidate || window.mozRTCIceCandidate || window.webkitRTCIceCandidate;
+window.RTCSessionDescription = window.RTCSessionDescription || window.mozRTCSessionDescription || window.webkitRTCSessionDescription;
+window.SpeechRecognition = window.SpeechRecognition || window.webkitSpeechRecognition || window.mozSpeechRecognition
   || window.msSpeechRecognition || window.oSpeechRecognition;
 
 var config = {
@@ -167,4 +162,3 @@ function endCall() {
   if (remoteVideo) remoteVideo.src = "";
   history.go(0)
 };
-
