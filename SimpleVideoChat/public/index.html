@@ -9,17 +9,17 @@
   <body>
     <div class = "wrapper">
     <div class="rVideo">
-    <video id="remoteVideo" autoplay></video>
+    <video class="rVideo" id="remoteVideo" autoplay></video>
   </div>
   <div class = "lVideo" >
-    <video id="localVideo" autoplay muted></video>
+    <video class = "lVideo" id="localVideo" autoplay muted></video>
   </div>
   <div class = "cButtons">
     <input id="videoCallButton" type="button" disabled value="Video Call"/>
     <input id="endCallButton" type="button" disabled value="End Call"/>
 </div>
 <div class = "iWindow">
-  <textarea id="statusWindow" > </textarea>
+  <textarea class = "iWindow" id="statusWindow" rows="5" cols ="50"> </textarea>
  </div>
  </div>
     <script>window.addEventListener("load", pageReady);</script>
