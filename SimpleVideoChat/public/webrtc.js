@@ -6,6 +6,7 @@ window.RTCSessionDescription = window.RTCSessionDescription || window.mozRTCSess
 window.SpeechRecognition = window.SpeechRecognition || window.webkitSpeechRecognition || window.mozSpeechRecognition
   || window.msSpeechRecognition || window.oSpeechRecognition;
 
+var audio = new Audio('detringer.m4a');
 var config = {
   wssHost: 'wss://aka.ite.kth.se/websocket/'
   // wssHost: 'wss://example.com/myWebSocket'
@@ -147,6 +148,7 @@ function createAndSendAnswer() {
 
 function onIceCandidateHandler(evt) {
   if (!evt || !evt.candidate) return;
+  audio.play();
   wsc.send(JSON.stringify({"candidate": evt.candidate }));
 };
 
