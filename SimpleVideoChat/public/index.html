@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link rel="stylesheet" type="text/css" href="myStyle.css">
+    <script src="webrtc.js"></script>
+    <title>WebRTC Simple Video-Chat</title>
+  </head>
+
+  <body>
+    <div class="remoteVideo">
+    <video id="remoteVideo" autoplay></video>
+  </div>
+  <div class = "localVideo" >
+    <video id="localVideo" autoplay muted></video>
+  </div>
+  <div class = "controllButtons">
+  <div class ="videoCallButton" >
+    <input id="videoCallButton" type="button" disabled value="Video Call"/>
+  </div>
+  <div class = "endCallButton">
+    <input id="endCallButton" type="button" disabled value="End Call"/>
+  </div>
+</div>
+    <script>window.addEventListener("load", pageReady);</script>
+  </body>
+</html>
