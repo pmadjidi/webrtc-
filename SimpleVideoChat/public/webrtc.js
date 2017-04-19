@@ -6,7 +6,8 @@ window.RTCSessionDescription = window.RTCSessionDescription || window.mozRTCSess
 window.SpeechRecognition = window.SpeechRecognition || window.webkitSpeechRecognition || window.mozSpeechRecognition
   || window.msSpeechRecognition || window.oSpeechRecognition;
 
-var audio = new Audio('detringer.m4a');
+var ringing = new Audio('detringer.m4a');
+var peeronline = new Audio('peeronline.m4a');
 var config = {
   wssHost: 'wss://aka.ite.kth.se/websocket/'
   // wssHost: 'wss://example.com/myWebSocket'
@@ -112,7 +113,7 @@ wsc.onmessage = function (evt) {
     .catch(err=>console.log("In Error",err));
   } else if (signal.peer){
     statusWindow.value += "\nPeer Online......"
-
+    peeronline.play()
   } else if ( signal.closeConnection){
     console.log("Received 'close call' signal from remote peer.");
     statusWindow.value += "\nAbout to tear down the call......."
@@ -152,7 +153,7 @@ function createAndSendAnswer() {
 
 function onIceCandidateHandler(evt) {
   if (!evt || !evt.candidate) return;
-  audio.play();
+  ringing.play();
   wsc.send(JSON.stringify({"candidate": evt.candidate }));
 };
 
