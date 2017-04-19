@@ -43,7 +43,8 @@ function pageReady() {
     });
 
     resetButton.addEventListener("click", function (evt) {
-      console.log("Reset Called.......")
+      wsc.send(JSON.stringify({"closeConnection": true }));
+      console.log("Reset Called.......",evt)
       location.reload();
     });
 
