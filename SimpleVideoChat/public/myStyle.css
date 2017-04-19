@@ -5,22 +5,26 @@
   grid-auto-columns: minmax(300px, auto);
   grid-gap: 10px;
   grid-auto-rows: minmax(100px, auto);
-  border:1px solid red;
+  border:20px solid red;
 }
 
 .lVideo {
   grid-row: 1 / 4;
   grid-column: 1/2;
+  border: 10px solid black;
 }
 .rVideo {
   grid-row: 1 / 4;
   grid-column: 3 / 4;
+  border: 10px solid blue;
 }
 .cButtons {
   grid-row: 5/6;
   grid-column: 1/2;
+  border: 5px solid green;
 }
 .iWindwo {
   grid-row: 7/8;
   grid-column: 3/4;
+  border: 5px solid yellow;
 }
