@@ -31,7 +31,7 @@ console.log("WebSocket Secure server is up and running.");
 /** successful connection */
 wss.on('connection', function (client) {
   console.log("A new WebSocket client was connected.");
-  console.log('New websocket connection from %s:%d', ws._socket.remoteAddress, ws._socket.remotePort);
+  console.log('New websocket connection from %s:%d', client._socket.remoteAddress,client._socket.remotePort);
   /** incomming message */
   client.on('message', function (message) {
     /** broadcast message to all clients */
