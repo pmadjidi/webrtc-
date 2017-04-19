@@ -15,6 +15,7 @@ var localVideoElem = null,
   localVideoStream = null,
   videoCallButton = null,
   endCallButton = null;
+  resetButton = null;
   statusWindow = null;
 var peerConn = null,
   wsc = new WebSocket(config.wssHost),
@@ -30,6 +31,7 @@ function pageReady() {
   if(navigator.getUserMedia) {
     videoCallButton = document.getElementById("videoCallButton");
     endCallButton = document.getElementById("endCallButton");
+    resetButton = document.getElementById("resetButton");
     localVideo = document.getElementById('localVideo');
     remoteVideo = document.getElementById('remoteVideo');
     statusWindow = document.getElementById('statusWindow');
@@ -39,6 +41,11 @@ function pageReady() {
     endCallButton.addEventListener("click", function (evt) {
       wsc.send(JSON.stringify({"closeConnection": true }));
     });
+
+    resetButton.addEventListener("click", function (evt) {
+      location.reload();
+    });
+
   } else {
     alert("Sorry, your browser does not support WebRTC!")
   }
