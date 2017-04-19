@@ -115,6 +115,7 @@ wsc.onmessage = function (evt) {
 };
 
 function createAndSendOffer() {
+  videoCallButton.removeAttribute("disabled");
   peerConn.createOffer(
     function (offer) {
       var off = new RTCSessionDescription(offer);
